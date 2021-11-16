@@ -17,5 +17,5 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"lY9v":[function(require,module,exports) {
 "use strict";function e(){return React.createElement("div",{className:"App"},"Hello World")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0,require("./App.css");var t=e;exports.default=t;
 },{"./App.css":"EQHX"}],"Focm":[function(require,module,exports) {
-"use strict";var e=u(require("react")),t=u(require("react-dom")),r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var l=document.querySelectorAll(".reddit_widget");l.forEach(function(u){t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,null)),u)});
-},{"react":"n8MK","react-dom":"NKHc","./App":"lY9v"}]},{},["Focm"], null)
+"use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}require("./index.css");var l=document.querySelectorAll(".reddit_widget");l.forEach(function(u){r.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(t.default,null)),u)});
+},{"react":"n8MK","react-dom":"NKHc","./App":"lY9v","./index.css":"EQHX"}]},{},["Focm"], null)
