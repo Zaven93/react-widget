@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@fancyapps/ui": "^4.0.9",
+    "@reduxjs/toolkit": "^1.6.2",
     "@splidejs/react-splide": "^0.6.12",
     "@tailwindcss/aspect-ratio": "^0.3.0",
-    "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -19,7 +19,9 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "npm run build:react && npm run build:bundle",
+    "build:react": "react-app-rewired build",
+    "build:bundle": "webpack --config webpack.config.js",
     "build:widget": "parcel build src/index.js --no-source-maps -d docs",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
@@ -44,12 +46,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
     "autoprefixer": "^9",
     "parcel-bundler": "^1.12.5",
     "postcss": "^7",
     "react-app-rewired": "^2.1.8",
     "stylelint": "^14.1.0",
     "stylelint-webpack-plugin": "^3.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "terser-webpack-plugin": "^5.2.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-cli": "^4.9.1"
   }
 }
