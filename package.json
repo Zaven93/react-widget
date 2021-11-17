@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fancyapps/ui": "^4.0.9",
+    "@splidejs/react-splide": "^0.6.12",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,11 +18,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "build:widget": "parcel build src/index.js --no-source-maps -d docs",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "lint:css": "stylelint \"./src/styles/**/*.{css,scss}\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +44,12 @@
     ]
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "autoprefixer": "^9",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^7",
+    "react-app-rewired": "^2.1.8",
+    "stylelint": "^14.1.0",
+    "stylelint-webpack-plugin": "^3.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

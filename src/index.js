@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import Provider from "./context/navContext";
 import App from "./App";
+import "./index.css";
 
 const WidgetDivs = document.querySelectorAll(".reddit_widget");
 
