@@ -1,23 +1,27 @@
 import { useContext } from "react";
 
-import { NavContext } from "../context/navContext";
+import { NavContext } from "../../context/navContext";
+import { buildingTestId } from "../../tests/constants";
 
 const Building = ({ nextLink, prevLink, hash }) => {
-  const { triggerTransition } = useContext(NavContext);
+  const navContext = useContext(NavContext);
 
   return (
-    <div>
+    <div
+      data-testid={buildingTestId}
+      className="p-6 items-center justify-center"
+    >
       <h1>Building</h1>
       <div className="button-container">
         <button
           disabled={!prevLink}
-          onClick={() => triggerTransition(hash, prevLink)}
+          onClick={() => navContext.triggerTransition(hash, prevLink)}
         >
           Prev
         </button>
         <button
           disabled={!nextLink}
-          onClick={() => triggerTransition(hash, nextLink)}
+          onClick={() => navContext.triggerTransition(hash, nextLink)}
         >
           Next
         </button>

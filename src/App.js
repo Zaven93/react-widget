@@ -4,10 +4,11 @@ import "./App.css";
 import { NavContext } from "./context/navContext";
 
 function App() {
-  const { navigation } = useContext(NavContext);
+  const navContext = useContext(NavContext);
 
-  const renderScreen = useCallback(() => {
-    if (!navigation) return;
+  const renderScreen = () => {
+    if (!navContext?.navigation) return;
+    const { navigation } = navContext;
     const activeScreen = Object.entries(navigation).find(
       ([_, value]) => value?.active === true
     );
@@ -15,13 +16,10 @@ function App() {
     if (!activeScreen.length) return;
 
     return activeScreen[1]?.component;
-  }, [navigation]);
+  };
 
-  useEffect(() => {
-    renderScreen();
-  }, [renderScreen]);
-
-  return navigation && renderScreen();
+  if (!navContext) return <div>Loading...</div>;
+  return renderScreen();
 }
 
 export default App;
