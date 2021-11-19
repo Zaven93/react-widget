@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Building component Should have navigation buttons and text 1`] = `
+<div>
+  <div
+    class="p-6 items-center justify-center"
+    data-testid="/building-screen/"
+  >
+    <h1>
+      Building
+    </h1>
+    <div
+      class="button-container"
+    >
+      <button
+        disabled=""
+      >
+        Prev
+      </button>
+      <button>
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+`;

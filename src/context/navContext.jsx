@@ -9,54 +9,44 @@ export const NavContext = createContext();
 
 const { Provider } = NavContext;
 
-const NavProvider = ({ children }) => {
-  const [navigation, setNavigation] = useState(null);
+const settleNav = () => {
+  const page1 = uuidv4();
+  const page2 = uuidv4();
+  const page3 = uuidv4();
 
-  const settleNav = () => {
-    const page1 = uuidv4();
-    const page2 = uuidv4();
-    const page3 = uuidv4();
-
-    return {
-      [page1]: {
-        name: "Building",
-        prevLink: null,
-        nextLink: page2,
-        active: true,
-        component: (
-          <Building
-            hash={page1}
-            active={true}
-            nextLink={page2}
-            prevLink={null}
-          />
-        ),
-      },
-      [page2]: {
-        name: "Floor",
-        prevLink: page1,
-        nextLink: page3,
-        active: false,
-        component: (
-          <Floor
-            hash={page2}
-            active={false}
-            nextLink={page3}
-            prevLink={page1}
-          />
-        ),
-      },
-      [page3]: {
-        name: "Room",
-        prevLink: page2,
-        nextLink: null,
-        active: false,
-        component: (
-          <Room hash={page3} active={false} nextLink={null} prevLink={page2} />
-        ),
-      },
-    };
+  return {
+    [page1]: {
+      name: "Building",
+      prevLink: null,
+      nextLink: page2,
+      active: true,
+      component: (
+        <Building hash={page1} active={true} nextLink={page2} prevLink={null} />
+      ),
+    },
+    [page2]: {
+      name: "Floor",
+      prevLink: page1,
+      nextLink: page3,
+      active: false,
+      component: (
+        <Floor hash={page2} active={false} nextLink={page3} prevLink={page1} />
+      ),
+    },
+    [page3]: {
+      name: "Room",
+      prevLink: page2,
+      nextLink: null,
+      active: false,
+      component: (
+        <Room hash={page3} active={false} nextLink={null} prevLink={page2} />
+      ),
+    },
   };
+};
+
+const NavProvider = ({ children }) => {
+  const [navigation, setNavigation] = useState(settleNav());
 
   const triggerTransition = (inactivateLink, activateLink) => {
     if (!inactivateLink || !activateLink) return;
@@ -78,21 +68,6 @@ const NavProvider = ({ children }) => {
       })
     );
   };
-
-  useEffect(() => {
-    let nav = settleNav();
-    const navStatus = JSON.parse(localStorage.getItem("navStatus"));
-
-    if (navStatus) {
-      nav = {
-        ...nav,
-        [navStatus.activate]: { ...nav[navStatus.activate], active: true },
-        [navStatus.inactivate]: { ...nav[navStatus.inactivate], active: false },
-      };
-    }
-
-    setNavigation(nav);
-  }, []);
 
   return (
     <Provider value={{ navigation, setNavigation, triggerTransition }}>

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Floor component Should have navigation button and text 1`] = `
+<div>
+  <div
+    data-testid="/floor-screen/"
+  >
+    <h1>
+      Floor
+    </h1>
+    <div
+      class="button-container"
+    >
+      <button>
+        Prev
+      </button>
+      <button>
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+`;
