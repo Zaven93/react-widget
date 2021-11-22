@@ -1,6 +1,6 @@
 import { useContext, useEffect, useCallback } from "react";
 
-import "./App.css";
+import "./App.scss";
 import { NavContext } from "./context/navContext";
 
 function App() {

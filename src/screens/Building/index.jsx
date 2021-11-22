@@ -11,6 +11,8 @@ const Building = ({ nextLink, prevLink, hash }) => {
       data-testid={buildingTestId}
       className="p-6 items-center justify-center"
     >
+      <div className="w-1/3">1</div>
+      <div className="w-1/2">2</div>
       <h1>Building</h1>
       <div className="button-container">
         <button
