@@ -9,7 +9,7 @@ const Building = ({ nextLink, prevLink, hash }) => {
   return (
     <div
       data-testid={buildingTestId}
-      className="p-6 items-center justify-center"
+      className="building p-6 items-center justify-center"
     >
       <div className="w-1/2">1</div>
       <div className="w-1/2">2</div>
