@@ -31,8 +31,8 @@
     "build:widget": "parcel build src/index.js --no-source-maps -d docs",
     "test": "craco test",
     "eject": "craco eject",
-    "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css",
-    "lint:css": "stylelint './src/*.css'"
+    "watch:css": "postcss src/styles/tailwind-entry.css -o src/styles/tailwind-output.css",
+    "lint:styles": "stylelint './src/*.scss'"
   },
   "eslintConfig": {
     "extends": [
