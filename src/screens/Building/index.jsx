@@ -7,13 +7,11 @@ const Building = ({ nextLink, prevLink, hash }) => {
   const navContext = useContext(NavContext);
 
   return (
-    <div
-      data-testid={buildingTestId}
-      className="p-6 items-center justify-center"
-    >
-      <div className="w-1/3">1</div>
-      <div className="w-1/2">2</div>
-      <h1>Building</h1>
+    <div data-testid={buildingTestId} className="p-6 items-center justify-center" >
+      <h1 className="tk-futura-pt">Building</h1>
+      <h2 className="tk-futura-pt">Title 1</h2>
+      <h2 className="tk-futura-pt-condensed">Title 2</h2>
+      <h2 className="tk-futura-pt-bold">Title 3</h2>
       <div className="button-container">
         <button
           disabled={!prevLink}

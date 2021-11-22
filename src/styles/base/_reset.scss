@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: $base-min-width;
+  font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  color: $base-text-color;
+  background: $base-background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// google map fix
+.gm-style img {
+  max-width: none;
+}
+
+button,
+a,
+span.btn-more,
+input[type="submit"],
+input[type="reset"] {
+  outline: none;
+  @include animates;
+}
+
+// transition for svg
+svg * {
+  transition: all $animation-speed ease;
+}

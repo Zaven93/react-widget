@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 
 import Provider from "./context/navContext";
 import App from "./App";
-import "./styles/tailwind-output.css";
-import "./index.scss";
+import "./styles/index.scss";
 
 const WidgetDivs = document.querySelectorAll(".reddit_widget");
 
