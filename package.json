@@ -26,11 +26,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "yarn watch:css && craco start",
     "build": "craco build",
     "build:widget": "parcel build src/index.js --no-source-maps -d docs",
     "test": "craco test",
     "eject": "craco eject",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css",
     "lint:css": "stylelint './src/*.css'"
   },
   "eslintConfig": {
@@ -56,6 +57,7 @@
     "@babel/preset-react": "^7.16.0",
     "autoprefixer": "^9",
     "parcel-bundler": "^1.12.5",
+    "postcss-cli": "^9.0.2",
     "react-app-rewired": "^2.1.8",
     "stylelint": "^14.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",

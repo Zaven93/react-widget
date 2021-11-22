@@ -9,9 +9,9 @@ const Building = ({ nextLink, prevLink, hash }) => {
   return (
     <div
       data-testid={buildingTestId}
-      className="building p-6 items-center justify-center"
+      className="p-6 items-center justify-center"
     >
-      <div className="w-1/2">1</div>
+      <div className="w-1/3">1</div>
       <div className="w-1/2">2</div>
       <h1>Building</h1>
       <div className="button-container">
