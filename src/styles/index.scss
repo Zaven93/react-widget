@@ -1,8 +1,5 @@
 @charset 'UTF-8';
 
-// import tailwind files
-@import "./tailwind-output.css";
-
 // import your files
 
 $breakpoints: (
@@ -27,14 +24,17 @@ $media-expressions: (
   "retina3x": "(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)"
 );
 
+// import tailwind files
+@import "./tailwind-output.css";
+
 @import "vendors/include-media";
 @import "vendors/normalize";
 
 @import "base/variables";
 @import "base/mixins";
 @import "base/helpers";
-@import "base/reset";
-@import "base/typography";
 @import "base/forms";
 
 @import "layout/all";
+
+@import "modules/building-widget-filters";

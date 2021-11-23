@@ -1,34 +1,3 @@
-// list reset
-%listreset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-// clearfix
-%clearfix {
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-.clearfix {
-  @extend %clearfix;
-}
-
-// transition
-%transition {
-  transition: all 0.3s ease-in-out;
-}
-
-.sr-only {
-  position: absolute;
-  left: -9999px;
-  visibility: hidden;
-}
-
 .accessibility {
   position: absolute;
   left: -100000px;
@@ -44,45 +13,14 @@
 }
 
 .visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
+  display: block;
   position: absolute;
   width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   white-space: nowrap;
-}
-
-.text-md-left {
-  @include media ("≥tablet") {
-    text-align: left;
-  }
-}
-
-.text-right-sm {
-  @include media("≥tablet", "<desktop") {
-    text-align: right;
-  }
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.d-xs-block {
-  @include media ("≥phone") {
-    display: block !important;
-  }
-}
-
-.d-xs-inline-flex {
-  @include media ("≥phone") {
-    display: inline-flex !important;
-  }
-}
-
-.text-white {
-  color: #fff;
+  clip: rect(0 0 0 0);
 }

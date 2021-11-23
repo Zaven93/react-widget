@@ -1,0 +1,43 @@
+.building-widget-open-close {
+  position: relative;
+  padding: 0 0 4px;
+  border-bottom: 1px solid $base-border;
+  &[open] {
+
+    .building-widget-open-close__opener {
+      &::after {
+        margin-top: -3px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+.building-widget-open-close__opener {
+  position: relative;
+  padding: 12px 55px 12px 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.333;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    margin-top: -8px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: $brand-color;
+    transform: rotate(-45deg);
+  }
+}

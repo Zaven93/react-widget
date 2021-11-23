@@ -1,5 +1,65 @@
-.container {
-  max-width: 1360px;
+.building-widget {
+  box-sizing: border-box;
+  font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  letter-spacing: 0;
+  color: $base-text-color;
+  background: $base-background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+
+  button,
+  a,
+  input[type="submit"],
+  input[type="reset"] {
+    @include animates;
+  }
+
+  p {
+    margin: 0 0 15px;
+    @include media("≥tablet") {
+      margin: 0 0 25px;
+    }
+    @include media("≥desktop") {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.building-widget__container {
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 calc(#{$grid-gutter-width} / 2);
+}
+
+.building-widget__logo {
+  width: 209px;
+  border-bottom: 1px solid $base-border;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.building-widget-block {
+  max-width: 440px;
+  padding: 20px 24px 40px;
+  @include media ("≥tablet") {
+    padding: 40px 30px;
+  }
+  @include media ("≥desktop") {
+    max-width: none;
+  }
+  @include media ("≥widescreen") {
+    padding: 80px 62px;
+  }
+}
+
+.building-widget-block__title {
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: $brand-color;
+  @include media ("≥tablet") {
+    font-size: 26px;
+  }
 }
