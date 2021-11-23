@@ -42,15 +42,21 @@
 
 .building-widget-block {
   max-width: 440px;
-  padding: 20px 24px 40px;
+  padding: 20px 24px;
   @include media ("≥tablet") {
-    padding: 40px 30px;
+    padding: 40px 30px 20px;
   }
   @include media ("≥desktop") {
     max-width: none;
   }
   @include media ("≥widescreen") {
-    padding: 80px 62px;
+    padding: 80px 60px 20px;
+  }
+  &:only-child {
+    padding-bottom: 40px;
+    @include media ("≥widescreen") {
+      padding-bottom: 80px;
+    }
   }
 }
 

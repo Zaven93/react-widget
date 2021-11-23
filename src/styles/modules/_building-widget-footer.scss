@@ -1,0 +1,13 @@
+.building-widget-footer-box {
+  max-width: 440px;
+  padding: 20px 24px;
+  @include media ("≥tablet") {
+    padding: 30px;
+  }
+  @include media ("≥desktop") {
+    max-width: none;
+  }
+  @include media ("≥widescreen") {
+    padding: 30px 60px;
+  }
+}
