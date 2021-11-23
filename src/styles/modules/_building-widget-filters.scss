@@ -2,6 +2,9 @@
   position: relative;
   padding: 0 0 4px;
   border-bottom: 1px solid $base-border;
+  &:last-child {
+    border-bottom-width: 0;
+  }
   &[open] {
 
     .building-widget-open-close__opener {

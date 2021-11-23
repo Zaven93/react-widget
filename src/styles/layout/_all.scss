@@ -63,3 +63,43 @@
     font-size: 26px;
   }
 }
+
+.building-widget__floor-list {
+  font-size: 14px;
+
+  li {
+    margin: 0 0 8px;
+    &.active {
+
+      a {
+        color: $brand-color;
+      }
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      color: $brand-color;
+    }
+  }
+}
+
+.building-widget__btn-back {
+  padding: 9px 24px;
+  color: $base-secondary-text;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: $brand-color;
+    transform: rotate(45deg);
+  }
+}
