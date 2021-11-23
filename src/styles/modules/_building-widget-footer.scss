@@ -1,0 +1,34 @@
+.building-widget-footer-box {
+  max-width: 440px;
+  padding: 20px 24px;
+  @include media ("≥tablet") {
+    padding: 30px;
+  }
+  @include media ("≥desktop") {
+    max-width: none;
+  }
+  @include media ("≥widescreen") {
+    padding: 30px 60px;
+  }
+}
+
+.building-widget-footer-box__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 50px;
+  margin: 0 30px 12px 0;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  &.active {
+    border-width: 2px;
+  }
+
+  svg {
+    width: 34px;
+    height: 34px;
+    margin-top: -2px;
+  }
+}

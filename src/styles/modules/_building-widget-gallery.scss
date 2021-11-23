@@ -1,0 +1,23 @@
+.building-widget-gallery {
+  position: relative;
+}
+
+.building-widget-main-slider {
+  max-height: 1080px;
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+
+.building-widget-thumbs-slider {
+  margin: 0 0 10px;
+  @include media ("≥widescreen") {
+    margin: 0;
+  }
+
+  .splide__slide {
+    &.is-active {
+      border-width: 2px !important;
+      border-color: $brand-color !important;
+    }
+  }
+}
