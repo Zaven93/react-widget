@@ -1,59 +1,124 @@
-// forms
+.building-widget-form {
 
-form,
-fieldset {
-  margin: 0;
-  padding: 0;
-  border-style: none;
-}
-
-input[type='text'],
-input[type='tel'],
-input[type='email'],
-input[type='search'],
-input[type='password'],
-//input[type='url'],
-// input[type='date'],
-textarea {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  box-sizing: border-box;
-  border: 1px solid $form-element-border-color;
-  padding: $form-element-padding;
-
-  &:focus {
-    border-color: $form-element-focus-border-color;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
   }
 
-  @include placeholder {
-    color: $placeholder-color;
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="search"],
+  input[type="password"],
+  textarea {
+    box-sizing: border-box;
+    padding: $form-element-padding;
+    border: 1px solid $form-element-border-color;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    &:focus {
+      border-color: $form-element-focus-border-color;
+    }
+    @include placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  select {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  textarea {
+    vertical-align: top;
+    resize: vertical;
   }
 }
 
-select {
-  -webkit-border-radius: 0;
-}
-
-textarea {
-  resize: vertical;
+.building-widget-form__button {
+  display: inline-block;
   vertical-align: top;
-}
-
-button,
-.button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
+  min-width: 71px;
+  min-height: 29px;
+  padding: 0;
+  font-family: $base-font-family;
+  font-size: $button-font-size;
+  line-height: 1.2;
+  color: $button-text-color;
+  text-align: center;
+  background: $button-background-color;
+  border: 1px solid $button-border-color;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  padding:$btn-padding;
-  text-align:center;
+  border-radius: 0;
   cursor: pointer;
-  min-height:60px;
-  line-height:1;
+  &:hover,
+  &:focus {
+    color: $button-text-hover-color;
+    background: $button-background-hover-color;
+    border-color: $button-border-hover-color;
+  }
 }
 
-a.button {
-  line-height:56px;
+.building-widget-form__label {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: 400;
+}
+
+.building-widget-form__custom-input {
+  position: relative;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    &:checked,
+    &:focus {
+
+      + .building-widget-form__custom-label {
+        border-color: $brand-color;
+      }
+    }
+    &:disabled,
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+
+      + label {
+        color: #737b84;
+        text-decoration: line-through;
+        text-decoration-color: #737b84;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.building-widget-form__custom-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  transition: border-color $animation-speed ease-in-out;
+  &:hover {
+    border-color: $brand-color;
+  }
 }
