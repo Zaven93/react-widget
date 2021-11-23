@@ -11,7 +11,9 @@ const Building = ({ nextLink, prevLink, hash }) => {
       <div className="lg:flex lg:flex-row-reverse">
 
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2">
-          <img src="https://via.placeholder.com/1436x1080" alt="description" loading="lazy" width="1436" height="1080" />
+          <div className="building-widget__img-block">
+            <img src="https://via.placeholder.com/1436x1080" alt="description" loading="lazy" width="1436" height="1080" />
+          </div>
         </div>
 
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">

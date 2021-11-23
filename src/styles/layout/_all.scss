@@ -40,6 +40,11 @@
   }
 }
 
+.building-widget__img-block {
+  max-height: 1080px;
+  overflow: hidden;
+}
+
 .building-widget-block {
   max-width: 440px;
   padding: 20px 24px;
@@ -77,13 +82,13 @@
     margin: 0 0 8px;
     &.active {
 
-      a {
+      button {
         color: $brand-color;
       }
     }
   }
 
-  a {
+  button {
     &:hover,
     &:focus {
       color: $brand-color;

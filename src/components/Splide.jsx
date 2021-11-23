@@ -1,28 +1,32 @@
 import { useRef, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-const Splide = () => {
+import '@splidejs/splide/dist/css/splide.min.css';
+
+const SplideReact = () => {
   const mainRef = useRef();
   const thumbsRef = useRef();
 
   const mainOptions = {
     type: "loop",
-    perPage: 2,
+    speed: 800,
+    perPage: 1,
     perMove: 1,
     gap: "1rem",
     pagination: false,
-    height: "10rem",
+    arrows: false,
   };
 
   const thumbsOptions = {
     type: "slide",
-    rewind: true,
-    gap: "1rem",
-    pagination: false,
-    fixedWidth: 110,
-    fixedHeight: 70,
     cover: true,
-    focus: "center",
+    fixedWidth: 160,
+    fixedHeight: 120,
+    gap: "1rem",
+    speed: 800,
+    rewind: true,
+    pagination: false,
+    arrows: false,
     isNavigation: true,
   };
 
@@ -33,15 +37,77 @@ const Splide = () => {
   }, [mainRef, thumbsRef]);
 
   return (
-    <div className="wrapper">
-      <Splide options={mainOptions} ref={mainRef}>
-        <SplideSlide></SplideSlide>
-      </Splide>
-      <Splide options={thumbsOptions} ref={thumbsRef}>
-        <SplideSlide></SplideSlide>
-      </Splide>
+    <div className="building-widget-gallery">
+      <div className="building-widget-main-slider">
+        <Splide options={mainOptions} ref={mainRef}>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/1436x900" alt="description" loading="lazy" width="1436" height="900" />
+          </SplideSlide>
+        </Splide>
+      </div>
+      <div className="building-widget-thumbs-slider">
+        <Splide options={thumbsOptions} ref={thumbsRef}>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="https://via.placeholder.com/160x120" alt="description" loading="lazy" width="160" height="120" />
+          </SplideSlide>
+        </Splide>
+      </div>
     </div>
   );
 };
 
-export default Splide;
+export default SplideReact;

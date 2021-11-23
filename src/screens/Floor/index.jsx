@@ -11,7 +11,9 @@ const Floor = ({ hash, nextLink, prevLink }) => {
       <div className="lg:flex lg:flex-row-reverse">
 
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2">
-          <img src="https://via.placeholder.com/1436x1080" alt="description" loading="lazy" width="1436" height="1080" />
+          <div className="building-widget__img-block">
+            <img src="https://via.placeholder.com/1436x1080" alt="description" loading="lazy" width="1436" height="1080" />
+          </div>
         </div>
 
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">
@@ -49,34 +51,34 @@ const Floor = ({ hash, nextLink, prevLink }) => {
                       <div className="mb-4">
                         <ul className="building-widget__floor-list">
                           <li>
-                            <a href="#">
+                            <button>
                               1st Floor
-                            </a>
+                            </button>
                           </li>
                           <li className="active">
-                            <a href="#">
+                            <button>
                               2st Floor
-                            </a>
+                            </button>
                           </li>
                           <li>
-                            <a href="#">
+                            <button>
                               3st Floor
-                            </a>
+                            </button>
                           </li>
                           <li>
-                            <a href="#">
+                            <button>
                               4st Floor
-                            </a>
+                            </button>
                           </li>
                           <li>
-                            <a href="#">
+                            <button>
                               5st Floor
-                            </a>
+                            </button>
                           </li>
                           <li>
-                            <a href="#">
+                            <button>
                               6st Floor
-                            </a>
+                            </button>
                           </li>
                         </ul>
                       </div>

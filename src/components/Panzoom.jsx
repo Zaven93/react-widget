@@ -21,8 +21,8 @@ const Panzoom = (props) => {
   }, [wrapper.current]);
 
   return (
-    <div className="panzoom" ref={wrapper}>
-      <img className="panzoom__content" src={props.src} />
+    <div className="building-widget-panzoom panzoom" ref={wrapper}>
+      <img className="panzoom__content" src={props.src} alt="description" />
     </div>
   );
 };
