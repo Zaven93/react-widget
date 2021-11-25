@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Provider from "./context/navContext";
 import BuildingProvider from "./context/BuildingContext";
 import App from "./App";
+import "./styles/tailwind-output.css";
 import "./styles/index.scss";
 
 const WidgetDivs = document.querySelectorAll(".building-widget");

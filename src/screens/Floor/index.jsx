@@ -35,7 +35,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
           <div className="building-widget-block mx-auto">
             <div className="building-widget__logo text-center pb-5 mx-auto mb-16">
               <img
-                src="https://via.placeholder.com/193x86"
+                src="https://res.cloudinary.com/dpwbaabx2/image/upload/v1637841004/euz7n8h5jsg3cd8nh8jc.png"
                 alt="description"
                 loading="lazy"
                 width="193"

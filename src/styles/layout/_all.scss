@@ -81,7 +81,6 @@
   li {
     margin: 0 0 8px;
     &.active {
-
       button {
         color: $brand-color;
       }
@@ -89,7 +88,6 @@
   }
 
   button {
-    &.active,
     &:hover,
     &:focus {
       color: $brand-color;

@@ -14,9 +14,11 @@ const FilterFloor = ({ title }) => {
           <div className="mb-4">
             <ul className="building-widget__floor-list">
               {[...Array(6).keys()].map((i) => (
-                <li key={i}>
+                <li
+                  className={buildingState.chosenFloor === i + 1 && "active"}
+                  key={i}
+                >
                   <button
-                    className={buildingState.chosenFloor === i + 1 && "active"}
                     onClick={(e) => {
                       e.preventDefault();
                       setFloor(i + 1);
