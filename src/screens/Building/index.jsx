@@ -7,6 +7,7 @@ import BuildingProvider, {
 import { NavContext } from "../../context/navContext";
 import { buildingTestId } from "../../tests/constants";
 import FilterContainer from "../../components/FilterContainer";
+import FilterUnitType from "../../components/FilterUnitType";
 
 const Building = ({ nextLink, prevLink, hash }) => {
   return (
@@ -17,7 +18,7 @@ const Building = ({ nextLink, prevLink, hash }) => {
 };
 
 const BuildingInner = ({ nextLink, prevLink, hash }) => {
-  const { buildingState } = useContext(BuildingContext);
+  const { buildingState, reset } = useContext(BuildingContext);
   const navContext = useContext(NavContext);
 
   const fetchProject = async () => {
@@ -68,7 +69,13 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
               />
             </div>
 
-            <FilterContainer title="Select a floor" />
+            <FilterContainer
+              prevLink={prevLink}
+              hash={hash}
+              title="Select a floor"
+            >
+              <FilterUnitType reset={reset} title="Filter by unit type" />
+            </FilterContainer>
           </div>
         </div>
       </div>

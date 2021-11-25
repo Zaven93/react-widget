@@ -89,6 +89,7 @@
   }
 
   button {
+    &.active,
     &:hover,
     &:focus {
       color: $brand-color;
