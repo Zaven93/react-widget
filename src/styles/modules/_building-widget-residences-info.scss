@@ -1,0 +1,30 @@
+.building-widget-residences-info {
+  margin: 0 0 20px;
+}
+
+.building-widget-residences-info__list {
+  font-size: 14px;
+  color: $base-secondary-text;
+  border-bottom: 1px solid $base-border;
+
+  dt {
+    font-size: $font-size-base;
+    color: $base-text-color;
+  }
+
+  dd {
+    margin: 0 0 12px;
+  }
+}
+
+.building-widget-residences-info__pdf-link {
+  color: $brand-color;
+  &:hover,
+  &:focus {
+    color: $base-text-color;
+  }
+
+  svg {
+    margin-left: 12px;
+  }
+}

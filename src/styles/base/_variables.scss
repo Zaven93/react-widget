@@ -4,6 +4,7 @@ $black: #000;
 $white: #fff;
 $base-border: #eaeaea;
 $brand-color: #a18c46;
+$base-secondary-text: #808080;
 
 
 $base-font-sans-serif: "futura-pt", 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -18,11 +19,10 @@ $base-background-color: $white !default;
 $font-size-base: 16px !default;
 $line-height-base: 1.5 !default;
 $base-font-family: $base-font-sans-serif !default;
-$vertical-rhythm: ($line-height-base * 1em);
 
 
 // Links
-$base-link-color: $black;
+$base-link-color: $brand-color;
 $base-hover-link-color: $black;
 
 
