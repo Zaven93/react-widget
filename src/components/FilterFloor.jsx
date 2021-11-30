@@ -8,11 +8,11 @@ const FilterFloor = ({ title }) => {
   const setFloor = (value) => dispatch({ type: "SET_FLOOR", payload: value });
   return (
     <details className="building-widget-open-close">
-      <summary className="building-widget-open-close__opener">{title}</summary>
+      <summary className="building-widget-open-close__opener uppercase">{title}</summary>
       <div className="building-widget-open-close__slide pt-2">
         <div className="-mb-2">
           <div className="mb-4">
-            <ul className="building-widget__floor-list">
+            <ul className="building-widget__floor-list uppercase">
               {[...Array(6).keys()].map((i) => (
                 <li
                   className={buildingState.chosenFloor === i + 1 && "active"}
