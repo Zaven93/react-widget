@@ -89,12 +89,12 @@ const Room = ({ hash, prevLink, nextLink }) => {
                 Back
               </button>
 
-              <div className="building-widget-block__title mb-4">
+              <div className="building-widget-block__title uppercase mb-4">
                 Penthouse 1
               </div>
 
               <div className="building-widget-residences-info">
-                <dl className="building-widget-residences-info__list mb-4">
+                <dl className="building-widget-residences-info__list uppercase mb-4">
                   <dt>Level</dt>
                   <dd>14th Floor</dd>
                   <dt>Residence Type</dt>
@@ -111,7 +111,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
 
                 <a
                   href="#"
-                  className="building-widget-residences-info__pdf-link flex capitalize"
+                  className="building-widget-residences-info__pdf-link flex items-center uppercase"
                   target="_blank"
                 >
                   Download Floorplan

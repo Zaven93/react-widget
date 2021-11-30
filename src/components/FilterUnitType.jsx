@@ -3,7 +3,7 @@ import FilterSelectors from "./FilterSelectors";
 const FilterUnitType = ({ title, reset }) => {
   return (
     <details className="building-widget-open-close">
-      <summary className="building-widget-open-close__opener">{title}</summary>
+      <summary className="building-widget-open-close__opener uppercase">{title}</summary>
       <div className="building-widget-open-close__slide pt-4">
         <div className="-mb-4">
           <div className="mb-4">

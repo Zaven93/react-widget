@@ -3,7 +3,9 @@ import FilterItem from "./FilterItem";
 const FilterSelectors = ({ title, count, actionType, stateType }) => {
   return (
     <div className="mb-4">
-      <div className="mb-2">{title}</div>
+      <div className="mb-2 uppercase">
+        {title}
+      </div>
       <div className="flex flex-wrap -mr-3 -mb-3">
         {[...Array(count).keys()].reverse().map((i) => (
           <FilterItem

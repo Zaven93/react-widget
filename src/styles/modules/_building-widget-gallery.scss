@@ -15,9 +15,10 @@
   }
 
   .splide__slide {
+    border: none !important;
+    opacity: 0.9;
     &.is-active {
-      border-width: 2px !important;
-      border-color: $brand-color !important;
+      opacity: 1;
     }
   }
 }

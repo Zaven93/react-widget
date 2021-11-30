@@ -16,9 +16,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
+  min-width: 140px;
   min-height: 50px;
   margin: 0 30px 12px 0;
+  @include media ("≥phone-l") {
+    min-width: 160px;
+  }
   &:nth-child(even) {
     margin-right: 0;
   }
