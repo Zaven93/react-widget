@@ -28,7 +28,9 @@
   },
   "scripts": {
     "start": "yarn watch:css && craco start",
-    "build": "craco build",
+    "build": "yarn build:react && yarn build:bundle",
+    "build:react": "craco build",
+    "build:bundle": "webpack --config webpack.config.js",
     "build:widget": "parcel build src/index.js --no-source-maps -d docs",
     "test": "craco test",
     "eject": "craco eject",
