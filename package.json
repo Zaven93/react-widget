@@ -29,10 +29,8 @@
   },
   "scripts": {
     "start": "yarn watch:css && craco start",
-    "build": "yarn build:react && yarn build:bundle",
-    "build:react": "craco build",
-    "build:bundle": "webpack --config webpack.config.js",
-    "build:widget": "parcel build src/index.js --no-source-maps -d docs",
+    "build": "craco build",
+    "build:widget": "parcel build src/index.js --no-source-maps -d widget && cp build/static/css/*.css widget/index.css",
     "test": "craco test",
     "eject": "craco eject",
     "watch:css": "postcss src/styles/tailwind-entry.css -o src/styles/tailwind-output.css",
