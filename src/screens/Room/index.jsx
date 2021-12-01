@@ -29,9 +29,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
             <div className="building-widget-footer-box w-100 mx-auto">
               <div className="-mb-3">
                 <button
-                  className={`building-widget-form__button building-widget-footer-box__button uppercase ${
-                    !renderActive && "active"
-                  }`}
+                  className="building-widget-form__button building-widget-footer-box__button uppercase"
                   onClick={() => setRenderActive(false)}
                 >
                   <svg
@@ -52,9 +50,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
                   <span>VIEWS</span>
                 </button>
                 <button
-                  className={`building-widget-form__button building-widget-footer-box__button uppercase ${
-                    renderActive && "active"
-                  }`}
+                  className="building-widget-form__button building-widget-footer-box__button uppercase"
                   onClick={() => setRenderActive(true)}
                 >
                   <svg
