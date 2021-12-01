@@ -83,12 +83,11 @@
 }
 
 .building-widget-block__title {
-  font-size: 22px;
+  font-size: 30px;
   line-height: 1.5;
-  font-weight: 700;
   color: $brand-color;
-  @include media ("≥tablet") {
-    font-size: 26px;
+  @include media ("≥widescreen") {
+    font-size: 36px;
   }
 }
 
