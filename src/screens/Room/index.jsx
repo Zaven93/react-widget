@@ -115,7 +115,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
                 </button>
               </div>
 
-              <div className="building-widget-block__title uppercase mb-4">
+              <div className="building-widget-block__title uppercase mb-2">
                 Penthouse 1
               </div>
 

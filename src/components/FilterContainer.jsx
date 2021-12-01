@@ -20,7 +20,7 @@ const FilterContainer = ({ title, withBack, children, prevLink, hash }) => {
             />
           </div>
         )}
-        <div className="building-widget-block__title uppercase mb-4">{title}</div>
+        <div className="building-widget-block__title uppercase mb-2">{title}</div>
         {children}
       </fieldset>
     </form>

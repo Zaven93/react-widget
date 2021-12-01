@@ -7,7 +7,7 @@ const FilterFloor = ({ title }) => {
 
   const setFloor = (value) => dispatch({ type: "SET_FLOOR", payload: value });
   return (
-    <details className="building-widget-open-close">
+    <details className="building-widget-open-close building-widget-open-close--alt">
       <summary className="building-widget-open-close__opener uppercase">{title}</summary>
       <div className="building-widget-open-close__slide pt-2">
         <div className="-mb-2">
