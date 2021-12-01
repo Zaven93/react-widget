@@ -48,8 +48,8 @@ const Room = ({ hash, prevLink, nextLink }) => {
         </div>
 
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">
-          <div className="flex flex-col lg:flex-col-reverse h-100 justify-between">
-            <div className="building-widget-footer-box w-100 mx-auto">
+          <div className="flex flex-col h-screen building-widget__holder">
+            <div className="building-widget-footer-box w-100 lg:w-4/12 xl:w-3/12 mx-auto">
               <div className="-mb-3">
                 <button
                   className="building-widget-form__button building-widget-footer-box__button uppercase"
