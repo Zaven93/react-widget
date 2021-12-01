@@ -140,21 +140,6 @@ const Room = ({ hash, prevLink, nextLink }) => {
           </div>
         </div>
       </div>
-
-      <div className="navigation-button-container">
-        <button
-          disabled={!prevLink}
-          onClick={() => navContext.triggerTransition(hash, prevLink)}
-        >
-          Prev
-        </button>
-        <button
-          disabled={!nextLink}
-          onClick={() => navContext.triggerTransition(hash, nextLink)}
-        >
-          Next
-        </button>
-      </div>
     </div>
   );
 };
