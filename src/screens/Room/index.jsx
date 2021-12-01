@@ -52,12 +52,10 @@ const Room = ({ hash, prevLink, nextLink }) => {
             <div className="building-widget-footer-box w-100 mx-auto">
               <div className="-mb-3">
                 <button
-                  className={`building-widget-form__button building-widget-footer-box__button uppercase ${
-                    !renderActive && "active"
-                  }`}
+                  className="building-widget-form__button building-widget-footer-box__button uppercase"
                   onClick={() => setRenderActive(false)}
                 >
-                  <svg 
+                  <svg
                     className="flex-shrink-0 mr-3"
                     width="35"
                     height="34"
@@ -65,14 +63,17 @@ const Room = ({ hash, prevLink, nextLink }) => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8904 21.9576L10.3179 7.78281C11.3817 6.72428 13.2207 5.50721 15.4958 5.12299C17.8289 4.72898 20.6665 5.20202 23.664 7.71527L18.6101 21.9579C18.0545 21.6655 17.4216 21.5 16.75 21.5C16.0787 21.5 15.446 21.6654 14.8904 21.9576ZM14.0349 22.5627L9.27416 7.80451C9.21859 7.63225 9.26045 7.44341 9.38361 7.31078C10.5273 6.07914 12.647 4.58994 15.3292 4.13696C18.0379 3.67951 21.2713 4.28819 24.5793 7.18266C24.7335 7.31761 24.7898 7.53301 24.7212 7.72615L19.4588 22.5568C20.2526 23.2877 20.75 24.3358 20.75 25.5C20.75 27.7092 18.9591 29.5 16.75 29.5C14.5409 29.5 12.75 27.7092 12.75 25.5C12.75 24.3389 13.2447 23.2934 14.0349 22.5627Z" fill="currentColor"/>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.8904 21.9576L10.3179 7.78281C11.3817 6.72428 13.2207 5.50721 15.4958 5.12299C17.8289 4.72898 20.6665 5.20202 23.664 7.71527L18.6101 21.9579C18.0545 21.6655 17.4216 21.5 16.75 21.5C16.0787 21.5 15.446 21.6654 14.8904 21.9576ZM14.0349 22.5627L9.27416 7.80451C9.21859 7.63225 9.26045 7.44341 9.38361 7.31078C10.5273 6.07914 12.647 4.58994 15.3292 4.13696C18.0379 3.67951 21.2713 4.28819 24.5793 7.18266C24.7335 7.31761 24.7898 7.53301 24.7212 7.72615L19.4588 22.5568C20.2526 23.2877 20.75 24.3358 20.75 25.5C20.75 27.7092 18.9591 29.5 16.75 29.5C14.5409 29.5 12.75 27.7092 12.75 25.5C12.75 24.3389 13.2447 23.2934 14.0349 22.5627Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <span>VIEWS</span>
                 </button>
                 <button
-                  className={`building-widget-form__button building-widget-footer-box__button uppercase ${
-                    renderActive && "active"
-                  }`}
+                  className="building-widget-form__button building-widget-footer-box__button uppercase"
                   onClick={() => setRenderActive(true)}
                 >
                   <svg
@@ -163,21 +164,6 @@ const Room = ({ hash, prevLink, nextLink }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="navigation-button-container">
-        <button
-          disabled={!prevLink}
-          onClick={() => navContext.triggerTransition(hash, prevLink)}
-        >
-          Prev
-        </button>
-        <button
-          disabled={!nextLink}
-          onClick={() => navContext.triggerTransition(hash, nextLink)}
-        >
-          Next
-        </button>
       </div>
     </div>
   );
