@@ -11,12 +11,14 @@ const FilterContainer = ({ title, withBack, children, prevLink, hash }) => {
       <fieldset>
         <legend className="visually-hidden">Floor filter form</legend>
         {withBack && (
-          <Button
-            className="building-widget__btn-back inline-block relative mb-1"
-            disabled={!prevLink}
-            onClick={() => navContext.triggerTransition(hash, prevLink)}
-            title="Back"
-          />
+          <div className="hidden lg:block">
+            <Button
+              className="building-widget__btn-back inline-block relative mb-1"
+              disabled={!prevLink}
+              onClick={() => navContext.triggerTransition(hash, prevLink)}
+              title="Back"
+            />
+          </div>
         )}
         <div className="building-widget-block__title uppercase mb-4">{title}</div>
         {children}
