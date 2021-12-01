@@ -45,6 +45,16 @@
   overflow: hidden;
 }
 
+.building-widget__holder {
+  @include media ("≥desktop") {
+    padding-bottom: 140px;
+    overflow: hidden auto;
+  }
+  @include media ("≥fullhd") {
+    padding-bottom: 110px;
+  }
+}
+
 .building-widget-block {
   max-width: 440px;
   padding: 20px 24px;
