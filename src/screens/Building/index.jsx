@@ -50,10 +50,7 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
             loading="lazy"
             width="1436"
             height="1080"
-            onClick={() => {
-              alert(`You've chosen ${JSON.stringify(buildingState)}`);
-              navContext.triggerTransition(hash, nextLink);
-            }}
+            onClick={() => navContext.triggerTransition(hash, nextLink)}
           />
         </div>
 
