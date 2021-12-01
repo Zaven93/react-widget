@@ -115,7 +115,9 @@
 
 .building-widget__btn-back {
   padding: 9px 16px;
+  font-size: 14px;
   color: $base-secondary-text;
+  text-transform: uppercase;
   &::before {
     content: "";
     position: absolute;
@@ -124,10 +126,10 @@
     z-index: 1;
     width: 10px;
     height: 10px;
-    margin-top: -5px;
+    margin-top: -4px;
     border-width: 0 0 2px 2px;
     border-style: solid;
-    border-color: $brand-color;
+    border-color: currentColor;
     transform: rotate(45deg);
   }
 }
