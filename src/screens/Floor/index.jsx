@@ -11,8 +11,6 @@ const Floor = ({ hash, nextLink, prevLink }) => {
   const navContext = useContext(NavContext);
   const { reset, buildingState } = useContext(BuildingContext);
 
-  console.log("Building state is", buildingState);
-
   return (
     <div
       className="building-widget__container relative"
@@ -27,6 +25,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
               loading="lazy"
               width="1436"
               height="1080"
+              onClick={() => navContext.triggerTransition(hash, nextLink)}
             />
           </div>
         </div>
@@ -54,21 +53,6 @@ const Floor = ({ hash, nextLink, prevLink }) => {
             </FilterContainer>
           </div>
         </div>
-      </div>
-
-      <div className="navigation-button-container">
-        <button
-          disabled={!prevLink}
-          onClick={() => navContext.triggerTransition(hash, prevLink)}
-        >
-          Prev
-        </button>
-        <button
-          disabled={!nextLink}
-          onClick={() => navContext.triggerTransition(hash, nextLink)}
-        >
-          Next
-        </button>
       </div>
     </div>
   );
