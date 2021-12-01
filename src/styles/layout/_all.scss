@@ -32,11 +32,18 @@
 }
 
 .building-widget__logo {
-  width: 209px;
+  width: 185px;
   border-bottom: 1px solid $base-border;
+  @include media ("≥tablet") {
+    width: 209px;
+  }
 
   img {
+    width: 154px;
     margin: 0 auto;
+    @include media ("≥tablet") {
+      width: 193px;
+    }
   }
 }
 
@@ -57,7 +64,7 @@
 
 .building-widget-block {
   max-width: 440px;
-  padding: 20px 24px;
+  padding: 15px 24px;
   @include media ("≥tablet") {
     padding: 40px 30px 20px;
   }
@@ -107,7 +114,7 @@
 }
 
 .building-widget__btn-back {
-  padding: 9px 24px;
+  padding: 9px 16px;
   color: $base-secondary-text;
   &::before {
     content: "";
