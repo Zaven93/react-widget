@@ -8,7 +8,7 @@ const FilterItem = ({ value, actionType, stateType }) => {
   return (
     <div className="building-widget-form__custom-input mr-3 mb-3">
       <input
-        type="checkbox"
+        type="radio"
         name="building-widget-form__bedrooms"
         value={value}
         checked={parseInt(value) === buildingState[stateType]}

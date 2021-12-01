@@ -11,8 +11,6 @@ const Floor = ({ hash, nextLink, prevLink }) => {
   const navContext = useContext(NavContext);
   const { reset, buildingState } = useContext(BuildingContext);
 
-  console.log("Building state is", buildingState);
-
   return (
     <div
       className="building-widget__container relative"
