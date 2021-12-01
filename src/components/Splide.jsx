@@ -15,6 +15,11 @@ const SplideReact = () => {
     gap: "1rem",
     pagination: false,
     arrows: false,
+    breakpoints: {
+      767: {
+        destroy: true,
+      },
+    },
   };
 
   const thumbsOptions = {
@@ -28,6 +33,11 @@ const SplideReact = () => {
     pagination: false,
     arrows: false,
     isNavigation: true,
+    breakpoints: {
+      767: {
+        destroy: true,
+      },
+    },
   };
 
   useEffect(() => {
@@ -141,7 +151,7 @@ const SplideReact = () => {
           </SplideSlide>
         </Splide>
       </div>
-      <div className="building-widget-thumbs-slider">
+      <div className="building-widget-thumbs-slider hidden md:block">
         <Splide options={thumbsOptions} ref={thumbsRef}>
           <SplideSlide>
             <img
