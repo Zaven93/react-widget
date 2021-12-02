@@ -15,7 +15,6 @@ const Room = ({ hash, prevLink, nextLink }) => {
       className="building-widget__container relative"
       data-testid={roomTestId}
     >
-
       <div className="lg:hidden">
         <div className="building-widget__logo text-center py-4 mx-auto mb-3">
           <img
@@ -43,7 +42,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
           {renderActive ? (
             <Splide />
           ) : (
-            <Panzoom src="https://fancyapps.com/img/floor_plan.jpg" />
+            <Panzoom src="https://realestatewidget.000webhostapp.com/files/601.png" />
           )}
         </div>
 
