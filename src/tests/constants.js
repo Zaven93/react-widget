@@ -85,7 +85,7 @@ export const floorImageOption = {
       y: 4.579,
       width: 36.708,
       height: 25.222,
-      actions: { click: "follow-link", link: "#6", open_link_in_new_window: 0 },
+      actions: { open_link_in_new_window: 0 },
       tooltip: { enable_tooltip: 0 },
       tooltip_style: { background_color: "#cccccc" },
       tooltip_content: {

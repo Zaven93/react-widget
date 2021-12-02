@@ -13,6 +13,8 @@ const Floor = ({ hash, nextLink, prevLink }) => {
   const navContext = useContext(NavContext);
   const { reset, buildingState } = useContext(BuildingContext);
 
+  const { redirectToMain } = navContext;
+
   return (
     <div
       className="building-widget__container relative"
@@ -26,6 +28,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
             loading="lazy"
             width="193"
             height="86"
+            onClick={() => redirectToMain(hash)}
           />
         </div>
 
@@ -60,6 +63,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
                   loading="lazy"
                   width="193"
                   height="86"
+                  onClick={() => redirectToMain(hash)}
                 />
               </div>
             </div>

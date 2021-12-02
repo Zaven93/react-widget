@@ -69,8 +69,18 @@ const NavProvider = ({ children }) => {
     );
   };
 
+  const redirectToMain = (hash) => {
+    const mainLink = Object.keys(navigation).find(
+      (key) => navigation[key].name === "Building"
+    );
+
+    triggerTransition(hash, mainLink);
+  };
+
   return (
-    <Provider value={{ navigation, setNavigation, triggerTransition }}>
+    <Provider
+      value={{ navigation, setNavigation, triggerTransition, redirectToMain }}
+    >
       {children}
     </Provider>
   );
