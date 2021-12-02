@@ -74,8 +74,6 @@ const NavProvider = ({ children }) => {
       (key) => navigation[key].name === "Building"
     );
 
-    console.log("Main link is", mainLink);
-
     triggerTransition(hash, mainLink);
   };
 

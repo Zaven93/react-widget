@@ -15,21 +15,6 @@ const Floor = ({ hash, nextLink, prevLink }) => {
 
   const { redirectToMain } = navContext;
 
-  // const redirectToMain = () => {
-  //   alert("Clicked");
-  //   const { navigation } = navContext;
-
-  //   console.log("Navigation from navContext", navigation);
-
-  //   const mainLink = Object.keys(navigation).find(
-  //     (key) => navigation[key].name === "Building"
-  //   );
-
-  //   console.log("Main link is", mainLink);
-
-  //   navContext.triggerTransition(hash, mainLink);
-  // };
-
   return (
     <div
       className="building-widget__container relative"
