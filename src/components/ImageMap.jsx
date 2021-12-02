@@ -8,13 +8,19 @@ const ImageMap = ({ onClick, imageOptions }) => {
   useEffect(() => {
     const imageProContainer = $("#image-map-pro-container")[0];
     $(imageProContainer).imageMapPro(imageOptions);
+    $.imageMapProEventClickedShape = function (imageMapName, shapeName) {
+      // First, check which image map and which shape triggered the event
+      // We want to listen for events only from the image map “Building”
+      if (imageMapName == "building") {
+        onClick();
+      }
+
+      // Repeat for each floor
+      // …
+    };
   }, []);
 
-  return (
-    <>
-      <div onClick={onClick} id="image-map-pro-container"></div>
-    </>
-  );
+  return <div id="image-map-pro-container"></div>;
 };
 
 export default ImageMap;
