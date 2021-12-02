@@ -6,6 +6,7 @@ import BuildingProvider, {
 } from "../../context/BuildingContext";
 import { NavContext } from "../../context/navContext";
 import { buildingTestId } from "../../tests/constants";
+import { buildingImageOption } from "../../tests/constants";
 import FilterContainer from "../../components/FilterContainer";
 import FilterUnitType from "../../components/FilterUnitType";
 import ImageMap from "../../components/ImageMap";
@@ -38,6 +39,7 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
   useEffect(() => {
     fetchProject();
   }, []);
+
   return (
     <div
       className="building-widget__container relative"
@@ -58,6 +60,7 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
       <div className="lg:flex lg:flex-row-reverse">
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2">
           <ImageMap
+            imageOptions={buildingImageOption}
             onClick={() => navContext.triggerTransition(hash, nextLink)}
           />
           {/* <img

@@ -3,9 +3,11 @@ import { useContext } from "react";
 import { NavContext } from "../../context/navContext";
 import { BuildingContext } from "../../context/BuildingContext";
 import { floorTestId } from "../../tests/constants";
+import { floorImageOption } from "../../tests/constants";
 import FilterContainer from "../../components/FilterContainer";
 import FilterUnitType from "../../components/FilterUnitType";
 import FilterFloor from "../../components/FilterFloor";
+import ImageMap from "../../components/ImageMap";
 
 const Floor = ({ hash, nextLink, prevLink }) => {
   const navContext = useContext(NavContext);
@@ -41,13 +43,9 @@ const Floor = ({ hash, nextLink, prevLink }) => {
       <div className="lg:flex lg:flex-row-reverse">
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2">
           <div className="building-widget__img-block">
-            <img
-              src={buildingState.chosenFloorImage}
-              alt="description"
-              loading="lazy"
-              width="1436"
-              height="1080"
+            <ImageMap
               onClick={() => navContext.triggerTransition(hash, nextLink)}
+              imageOptions={floorImageOption}
             />
           </div>
         </div>
