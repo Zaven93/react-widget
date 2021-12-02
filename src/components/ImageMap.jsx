@@ -11,7 +11,7 @@ const ImageMap = ({ onClick, imageOptions }) => {
     $.imageMapProEventClickedShape = function (imageMapName, shapeName) {
       // First, check which image map and which shape triggered the event
       // We want to listen for events only from the image map “Building”
-      if (imageMapName == "building") {
+      if (imageMapName == "building" || imageMapName == "Floor 6") {
         onClick();
       }
 
