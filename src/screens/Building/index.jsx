@@ -8,6 +8,7 @@ import { NavContext } from "../../context/navContext";
 import { buildingTestId } from "../../tests/constants";
 import FilterContainer from "../../components/FilterContainer";
 import FilterUnitType from "../../components/FilterUnitType";
+import ImageMap from "../../components/ImageMap";
 
 const Building = ({ nextLink, prevLink, hash }) => {
   return (
@@ -42,7 +43,6 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
       className="building-widget__container relative"
       data-testid={buildingTestId}
     >
-
       <div className="lg:hidden">
         <div className="building-widget__logo text-center py-4 mx-auto mb-3">
           <img
@@ -57,14 +57,17 @@ const BuildingInner = ({ nextLink, prevLink, hash }) => {
 
       <div className="lg:flex lg:flex-row-reverse">
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2">
-          <img
+          <ImageMap
+            onClick={() => navContext.triggerTransition(hash, nextLink)}
+          />
+          {/* <img
             src="https://res.cloudinary.com/dpwbaabx2/image/upload/v1637840875/qicuhleb3p3favujg1ov.png"
             alt="description"
             loading="lazy"
             width="1436"
             height="1080"
             onClick={() => navContext.triggerTransition(hash, nextLink)}
-          />
+          /> */}
         </div>
 
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">
