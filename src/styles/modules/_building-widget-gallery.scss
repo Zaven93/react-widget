@@ -13,7 +13,7 @@
 
 .building-widget-main-slider {
   overflow: hidden;
-  @include media ("≥desktop") {
+  @include media ("≥tablet") {
     margin: 0 0 30px;
   }
   @include media ("≥widescreen") {

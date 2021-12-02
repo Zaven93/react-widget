@@ -50,7 +50,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">
           <div className="flex flex-col lg:h-screen building-widget__holder">
             <div className="building-widget-footer-box w-100 lg:w-4/12 xl:w-3/12 mx-auto">
-              <div className="-mb-3">
+              <div className="flex md:block justify-between -mb-3">
                 <button
                   className="building-widget-form__button building-widget-footer-box__button uppercase"
                   onClick={() => setRenderActive(false)}
