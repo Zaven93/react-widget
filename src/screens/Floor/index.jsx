@@ -13,6 +13,23 @@ const Floor = ({ hash, nextLink, prevLink }) => {
   const navContext = useContext(NavContext);
   const { reset, buildingState } = useContext(BuildingContext);
 
+  const { redirectToMain } = navContext;
+
+  // const redirectToMain = () => {
+  //   alert("Clicked");
+  //   const { navigation } = navContext;
+
+  //   console.log("Navigation from navContext", navigation);
+
+  //   const mainLink = Object.keys(navigation).find(
+  //     (key) => navigation[key].name === "Building"
+  //   );
+
+  //   console.log("Main link is", mainLink);
+
+  //   navContext.triggerTransition(hash, mainLink);
+  // };
+
   return (
     <div
       className="building-widget__container relative"
@@ -26,6 +43,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
             loading="lazy"
             width="193"
             height="86"
+            onClick={() => redirectToMain(hash)}
           />
         </div>
 
@@ -60,6 +78,7 @@ const Floor = ({ hash, nextLink, prevLink }) => {
                   loading="lazy"
                   width="193"
                   height="86"
+                  onClick={() => redirectToMain(hash)}
                 />
               </div>
             </div>

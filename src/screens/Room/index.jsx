@@ -10,6 +10,8 @@ const Room = ({ hash, prevLink, nextLink }) => {
   const [renderActive, setRenderActive] = useState(false);
   const navContext = useContext(NavContext);
 
+  const { redirectToMain, navigation } = navContext;
+
   return (
     <div
       className="building-widget__container relative"
@@ -23,6 +25,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
             loading="lazy"
             width="193"
             height="86"
+            onClick={() => redirectToMain(hash)}
           />
         </div>
 
@@ -102,6 +105,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
                     loading="lazy"
                     width="193"
                     height="86"
+                    onClick={() => redirectToMain(hash)}
                   />
                 </div>
 
