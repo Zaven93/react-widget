@@ -63,15 +63,11 @@ export const buildingImageOption = {
 };
 
 export const floorImageOption = {
-  id: 1209,
-  editor: {
-    selected_shape: "poly-6689",
-    tool: "poly",
-    shapeCounter: { polys: 1 },
-  },
+  id: 6074,
+  editor: { tool: "select", shapeCounter: { polys: 1 } },
   general: {
-    name: "Floor 6 601",
-    shortcode: "Floor6601",
+    name: "Floor 6",
+    shortcode: "Floor6",
     width: 2032,
     height: 3216,
     naturalWidth: 2032,
@@ -82,25 +78,26 @@ export const floorImageOption = {
   },
   spots: [
     {
-      id: "poly-6689",
+      id: "poly-9801",
       title: "601",
       type: "poly",
-      x: 56.521,
-      y: 6.294,
-      width: 32.552,
-      height: 23.404,
-      actions: { click: "follow-link" },
+      x: 56.567,
+      y: 4.579,
+      width: 36.708,
+      height: 25.222,
+      actions: { click: "follow-link", link: "#6", open_link_in_new_window: 0 },
       tooltip: { enable_tooltip: 0 },
+      tooltip_style: { background_color: "#cccccc" },
       tooltip_content: {
         squares_settings: {
           containers: [
             {
-              id: "sq-container-403761",
+              id: "sq-container-603181",
               settings: {
                 elements: [
                   {
                     settings: { name: "Heading", iconClass: "fa fa-header" },
-                    options: { heading: { text: "Poly 0" } },
+                    options: { heading: { text: "601" } },
                   },
                 ],
               },
@@ -109,18 +106,20 @@ export const floorImageOption = {
         },
       },
       points: [
-        { x: 16.37931034482759, y: 0 },
-        { x: 67.45689655172413, y: 0 },
-        { x: 67.45689655172413, y: 15.530303030303031 },
-        { x: 100, y: 15.909090909090908 },
-        { x: 100, y: 99.81060606060606 },
-        { x: 13.577586206896555, y: 100 },
-        { x: 12.715517241379311, y: 67.23484848484848 },
-        { x: 16.37931034482759, y: 67.42424242424242 },
-        { x: 16.37931034482759, y: 51.32575757575758 },
-        { x: 0, y: 51.515151515151516 },
-        { x: 0, y: 37.878787878787875 },
-        { x: 16.163793103448278, y: 37.878787878787875 },
+        { x: 14.48087431693989, y: 6.783919597989948 },
+        { x: 32.10382513661204, y: 6.783919597989948 },
+        { x: 32.10382513661204, y: 3.2663316582914574 },
+        { x: 100, y: 0 },
+        { x: 94.26229508196725, y: 75.50251256281409 },
+        { x: 88.6612021857923, y: 75.7537688442211 },
+        { x: 88.6612021857923, y: 99.37185929648241 },
+        { x: 11.475409836065571, y: 100 },
+        { x: 11.065977489601178, y: 69.22257788944722 },
+        { x: 14.481681755158629, y: 69.34650753768845 },
+        { x: 14.48087431693989, y: 54.77386934673366 },
+        { x: 0, y: 54.77386934673366 },
+        { x: 0.1366120218579244, y: 42.33668341708543 },
+        { x: 14.754098360655737, y: 42.085427135678394 },
       ],
     },
   ],
