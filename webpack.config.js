@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const glob = require("glob");
 
@@ -17,7 +18,14 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      { test: /\.html$/, use: "html-loader" },
     ],
   },
-  plugins: [new UglifyJsPlugin()],
+  plugins: [
+    new UglifyJsPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
+  ],
 };

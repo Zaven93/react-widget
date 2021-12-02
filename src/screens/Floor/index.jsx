@@ -16,7 +16,6 @@ const Floor = ({ hash, nextLink, prevLink }) => {
       className="building-widget__container relative"
       data-testid={floorTestId}
     >
-
       <div className="lg:hidden">
         <div className="building-widget__logo text-center py-4 mx-auto mb-3">
           <img
