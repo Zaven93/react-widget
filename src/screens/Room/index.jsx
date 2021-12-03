@@ -16,9 +16,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
   const { redirectToMain } = navContext;
 
   const handleRender = (render) => {
-    setTimeout(() => {
-      setRenderActive(render);
-    }, 100);
+    setRenderActive(render);
   };
 
   const renderGallery = useMemo(() => {
