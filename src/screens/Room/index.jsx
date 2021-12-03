@@ -1,5 +1,4 @@
 import { useContext, useState, useMemo } from "react";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { NavContext } from "../../context/navContext";
@@ -7,7 +6,6 @@ import { roomTestId } from "../../tests/constants";
 
 import Panzoom from "../../components/Panzoom";
 import Splide from "../../components/Splide";
-import useMobile from "../../hooks/useMobile";
 
 const Room = ({ hash, prevLink, nextLink }) => {
   const [renderActive, setRenderActive] = useState(false);
