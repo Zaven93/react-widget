@@ -10,7 +10,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
   const [renderActive, setRenderActive] = useState(false);
   const navContext = useContext(NavContext);
 
-  const { redirectToMain, navigation } = navContext;
+  const { redirectToMain } = navContext;
 
   return (
     <div
