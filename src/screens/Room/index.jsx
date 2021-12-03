@@ -1,5 +1,4 @@
 import { useContext, useState, useMemo } from "react";
-import "react-loading-skeleton/dist/skeleton.css";
 
 import { NavContext } from "../../context/navContext";
 import { roomTestId } from "../../tests/constants";
