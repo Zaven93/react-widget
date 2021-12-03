@@ -1,16 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import { NavContext } from "../../context/navContext";
 import { roomTestId } from "../../tests/constants";
 
 import Panzoom from "../../components/Panzoom";
 import Splide from "../../components/Splide";
+import useMobile from "../../hooks/useMobile";
 
 const Room = ({ hash, prevLink, nextLink }) => {
   const [renderActive, setRenderActive] = useState(false);
   const navContext = useContext(NavContext);
 
-  const { redirectToMain, navigation } = navContext;
+  const { redirectToMain } = navContext;
+
+  const handleRender = (render) => {
+    setTimeout(() => {
+      setRenderActive(render);
+    }, 100);
+  };
+
+  const renderGallery = useMemo(() => {
+    return renderActive ? (
+      <Splide />
+    ) : (
+      <Panzoom src="https://realestatewidget.000webhostapp.com/files/601.png" />
+    );
+  }, [renderActive]);
 
   return (
     <div
@@ -42,11 +59,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
 
       <div className="lg:flex lg:flex-row-reverse">
         <div className="lg:w-8/12 xl:w-9/12 lg:pl-2 relative">
-          {renderActive ? (
-            <Splide />
-          ) : (
-            <Panzoom src="https://realestatewidget.000webhostapp.com/files/601.png" />
-          )}
+          {renderGallery}
         </div>
 
         <div className="lg:w-4/12 xl:w-3/12 lg:pr-2">
@@ -55,7 +68,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
               <div className="flex md:block justify-between -mb-3">
                 <button
                   className="building-widget-form__button building-widget-footer-box__button uppercase"
-                  onClick={() => setRenderActive(false)}
+                  onClick={() => handleRender(false)}
                 >
                   <svg
                     className="flex-shrink-0 mr-3"
@@ -76,7 +89,7 @@ const Room = ({ hash, prevLink, nextLink }) => {
                 </button>
                 <button
                   className="building-widget-form__button building-widget-footer-box__button uppercase"
-                  onClick={() => setRenderActive(true)}
+                  onClick={() => handleRender(true)}
                 >
                   <svg
                     className="flex-shrink-0 mr-3"
