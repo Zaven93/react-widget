@@ -4,6 +4,7 @@ import { NavContext } from "./context/navContext";
 
 function App() {
   const navContext = useContext(NavContext);
+  console.log("Test message");
 
   const renderScreen = () => {
     if (!navContext?.navigation) return;
